@@ -1,0 +1,5 @@
+{
+    "require": {
+        "chillerlan/php-qrcode": "dev-main#f15b0afe9d4128bf734c3bf1bcffae72bf7b3e53"
+    }
+}
