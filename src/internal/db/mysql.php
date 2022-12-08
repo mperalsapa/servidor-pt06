@@ -22,6 +22,7 @@ function getMysqlPDO(): PDO
 }
 
 
+// busca en la base de dades si existeix un producte amb un numero de serie demanat
 function existProduct(string $serialNumber): bool
 {
     $mysqlPdo = getMysqlPDO();
@@ -36,7 +37,7 @@ function existProduct(string $serialNumber): bool
     }
 }
 
-
+// afegeix un producte a la base de dades, el cual ha sigut introduït en el formulari de "generar" QR
 function addProduct(string $name, string $model, string $serialNumber, string $productDate, string $input, string $description): bool
 {
     $mysqlPdo = getMysqlPDO();
@@ -57,11 +58,11 @@ function addProduct(string $name, string $model, string $serialNumber, string $p
     }
 }
 
+// actualitza un producte en base al seu numero de serie
 function updateProduct(string $name, string $model, string $serialNumber, string $productDate, string $input, string $description): bool
 {
 
     $mysqlPdo = getMysqlPDO();
-    // $pdo = $mysqlPdo->prepare('INSERT INTO producte (nom, model, sn, data, input, descripcio) VALUES (:name, :model, :serialNumber, :productDate, :input, :description)');
     $pdo = $mysqlPdo->prepare('UPDATE producte SET nom = :name, model = :model, data = :productDate, input = :input, descripcio = :description WHERE producte.sn = :serialNumber');
     $pdo->bindParam(":name", $name);
     $pdo->bindParam(":model", $model);
@@ -77,10 +78,8 @@ function updateProduct(string $name, string $model, string $serialNumber, string
     } else {
         return false;
     }
-
-    // return true;
 }
-
+// agafa la informacio del producte en base al numero de serie
 function getProduct(string $serialNumber): Mixed
 {
     $mysqlPdo = getMysqlPDO();
