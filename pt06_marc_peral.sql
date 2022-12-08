@@ -45,12 +45,7 @@ CREATE TABLE `producte` (
 --
 
 INSERT INTO `producte` (`id`, `nom`, `model`, `sn`, `data`, `input`, `descripcio`) VALUES
-(1, '1', '1', 'test3', '2022-12-02', '1', '1'),
-(3, 'Google Sec DNS', 'Smart TV 4K', 'samsung-stv554k', '2022-12-08', '12v 5a', 'La descripcio ha canviat.'),
-(4, 'TV LG', 'LG 4K Smart TV', 'lg4kst55', '2022-12-05', '12v 5a', 'tv de lg 4k'),
-(5, '123', '123', '123', '2022-12-07', '123', '123'),
-(6, 'Test final', 'finalisimo', 'serialnumberlaksjdlaks', '2022-01-01', '100v 40a', 'descripcio de la prova final... vamooooooooooo'),
-(7, '11111111111111111', '11', '11', '2022-12-07', '11', '1');
+(1, 'SanDisk', 'SDSSDE60-250G', 'MSIP-REM-WDT-SDSSDE60', '2022-12-02', '5V - 500mA', 'SanDisk Extreme Portable SDSSDE60-250G-G25 External 250GB Portable SED USB Type C / USB 3.1 Solid State Drive - Brand New. The rugged SanDisk® Extreme Portable SSD delivers high-speed transfers with up to 550MB/s read speeds. This makes it perfect for saving and editing hi-res photos and videos. With an IP55 rating, it also stands up to rain, splashes, spills and dust.');
 
 --
 -- Índices para tablas volcadas
