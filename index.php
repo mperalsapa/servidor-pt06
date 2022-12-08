@@ -27,11 +27,9 @@ function route(string $url, array $mux): void
 
 // declarem les rutes del lloc
 $mux["/"] = "src/controllers/scan_product.php";
-
 $mux["/index"] = "src/controllers/scan_product.php";
 $mux["/generate"] = "src/controllers/product_register.php";
 $mux["/read"] = "src/controllers/scan_product.php";
-$mux["/test"] = "src/controllers/test.php";
 
 // agafem el path de la sol·licitut
 // per exemple, el path de https://google.com/cerca.php seria /cerca.php
